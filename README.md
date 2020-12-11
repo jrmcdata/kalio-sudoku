@@ -4,16 +4,30 @@
 
 NONE
 
+## Important variables
+
+```
+self.val
+```
+
+A 81-integer list of digits 0-9. Values 1-9 indicate an occupied site, 0 an unoccupied one.
+
+```
+self.nei
+```
+
+A 81-set list of integers. Integers in the sets correspond to the allowed integers for a given site, occupied sites have corresponding 1-element sets.
+
 ## Important methods
 
 ```
 __init__(myArray)
 ```
 
-Initalizes a sudoku element depending on type(myArray)
-* sudoku: clones sudoku object
-* int list: creates a 9x9 sudoku grid from a 81x1 list with integers 0-9
-* none: creates a sudoku object with only zeroes
+Initializes a sudoku element depending on type(myArray)
+* sudoku: |clones sudoku object
+* int list: |creates a 9x9 sudoku grid from a 81x1 list with integers 0-9
+* none: |creates a sudoku object with only zeroes
 
 ### Deterministic methods
 
@@ -57,5 +71,5 @@ status( self ):
 
 Checks the status of the board:
 * -1 board is guaranteed to be unsolvable
-*  1 board is olved
+*  1 board is solved
 *  0 board is unsolved (but not necessarily unsolvable)
