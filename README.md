@@ -2,7 +2,7 @@
 
 ## Introduction
 
-NONE
+kalio-sudoku is a sudoku-solving python library. Sudoku() objects can be solved using deterministic or stochastic methods.
 
 ## Important variables
 
@@ -25,9 +25,9 @@ __init__(myArray)
 ```
 
 Initializes a sudoku element depending on type(myArray)
-* sudoku: |clones sudoku object
-* int list: |creates a 9x9 sudoku grid from a 81x1 list with integers 0-9
-* none: |creates a sudoku object with only zeroes
+* sudoku: clones sudoku object
+* integer-list: creates a 9x9 sudoku grid from a 81-integer list of digits 0-9.
+* none: creates a sudoku object with only zeroes
 
 ### Deterministic methods
 
@@ -49,7 +49,7 @@ solveTwins( self ):
 
 Attempts to solve board by eliminating all pairs of allowed values that only appear twice per region (domain, column, row).
 
-### Random methods
+### Stochastic methods
 
 ```
 solveRandom( self ):
@@ -70,6 +70,6 @@ status( self ):
 ```
 
 Checks the status of the board:
-* -1 board is guaranteed to be unsolvable
-*  1 board is solved
-*  0 board is unsolved (but not necessarily unsolvable)
+* -1: board is guaranteed to be unsolvable
+*  1: board is solved
+*  0: board is unsolved (but not necessarily unsolvable)
